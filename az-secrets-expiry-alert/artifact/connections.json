@@ -1,0 +1,49 @@
+{
+    "managedApiConnections": {
+        "keyvault": {
+            "api": {
+                "id": "/subscriptions/6a0bd5a4-9826-44fa-9023-813f69860137/providers/Microsoft.Web/locations/eastus2/managedApis/keyvault"
+            },
+            "authentication": {
+                "type": "ManagedServiceIdentity"
+            },
+            "connection": {
+                "id": "/subscriptions/6a0bd5a4-9826-44fa-9023-813f69860137/resourceGroups/az-secrets-expiry-alert/providers/Microsoft.Web/connections/keyvault"
+            },
+            "connectionProperties": {
+                "authentication": {
+                    "audience": "https://vault.azure.net",
+                    "type": "ManagedServiceIdentity"
+                }
+            },
+            "connectionRuntimeUrl": "https://a016fc7a9cdffc45.04.common.logic-eastus2.azure-apihub.net/apim/keyvault/e6c06d0eb076416a836e0f63e024ea1c"
+        },
+        "office365": {
+            "api": {
+                "id": "/subscriptions/6a0bd5a4-9826-44fa-9023-813f69860137/providers/Microsoft.Web/locations/eastus2/managedApis/office365"
+            },
+            "authentication": {
+                "type": "ManagedServiceIdentity"
+            },
+            "connection": {
+                "id": "/subscriptions/6a0bd5a4-9826-44fa-9023-813f69860137/resourceGroups/az-secrets-expiry-alert/providers/Microsoft.Web/connections/office365"
+            },
+            "connectionRuntimeUrl": "https://a016fc7a9cdffc45.04.common.logic-eastus2.azure-apihub.net/apim/office365/62accdf869bb4a4b965a98c2f8175502"
+        }
+    },
+    "serviceProviderConnections": {
+        "keyVault": {
+            "displayName": "keyvault_connection",
+            "parameterSetName": "ManagedServiceIdentity",
+            "parameterValues": {
+                "VaultUri": "@appsetting('keyVault_VaultUri')",
+                "authProvider": {
+                    "Type": "ManagedServiceIdentity"
+                }
+            },
+            "serviceProvider": {
+                "id": "/serviceProviders/keyVault"
+            }
+        }
+    }
+}
